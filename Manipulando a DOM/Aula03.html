@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso JS</title>
+</head>
+<body>
+    <div id = "app">
+        
+
+    </div>
+    
+    <script>
+    var linkElement= document.createElement('a');
+        //criando um elemento HTML(link) com JS
+    linkElement.setAttribute('href','https://www.google.com');
+
+    var textElement=document.createTextNode('Acessar google');
+    //criando um texto para o link
+    linkElement.appendChild(textElement);
+        //add o texto como filho do elemento
+    
+    var containerElement = document.querySelector('#app');
+    containerElement.appendChild(linkElement);
+            //jogando o link dentro da DOM no caso na div com ID APP
+
+    </script>
+</body>
+</html>

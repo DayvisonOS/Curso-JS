@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" class="nome">
+        <button class="btn">Muda Nome</button>
+    </div>
+
+
+<script>
+
+ var inputElement=document.querySelector('input');
+ var btnElement=document.querySelector('button.btn');
+console.log(inputElement);
+
+btnElement.onclick = function(){
+        
+        if (inputElement.value==''){
+            inputElement.value='Romao';
+            console.log(1)
+        }else if(inputElement.value=='Romao'){
+            inputElement.value='Dayvison';
+            console.log(2)
+        }else if(inputElement.value=='Dayvison'){
+            inputElement.value='Romao'; 
+            console.log(3)        
+        
+    }
+}
+
+
+
+</script>
+</body>
+</html>

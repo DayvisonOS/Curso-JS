@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso JS</title>
+</head>
+<body>
+    <div id = "app">
+        <input type="text" name="nome" id="nome">
+        <button class="botao">Adicionar</button>
+    </div>
+    
+    <script>
+    //var inputElement= document.getElementById('nome');
+    //forma de buscar elemento    
+
+    //var inputElement= document.querySelector('body div#app input');
+    //outra forma de buscar elemento passeando pela DOM, informando onde ela está 
+    
+    
+    var inputElement= document.querySelector('input[name=nome]');
+    //essa forma utiliza o input e passa um atributo dele que é o name
+    var btnElement = document.querySelector('button.botao');
+
+
+    btnElement.onclick= function(){
+        var text= inputElement.value;
+        alert(text);
+    }
+    
+    </script>
+</body>
+</html>

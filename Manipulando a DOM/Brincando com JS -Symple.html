@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <div class="quadro" align='center'>
+            <br><br><br><br><br>
+        <input type="text" class="nome" >
+        </div>
+    </div>
+
+
+<script>
+    var nomes=['romao','dayvi'];
+    var inputElement=document.querySelector('input');
+    var quadroElement =document.querySelector('.quadro');
+
+    quadroElement.style.width='200px';
+    quadroElement.style.height='200px';
+
+    console.log(inputElement);
+        function mudaNome(){
+               
+            quadroElement.style.backgroundColor=quadroElement   .style.backgroundColor == 'pink' ? 'red' : 'pink';
+            inputElement.value= inputElement.value == nomes[0]   ? nomes [1] : nomes[0];
+        }
+        setInterval(mudaNome,1000);
+
+
+</script>
+</body>
+</html>

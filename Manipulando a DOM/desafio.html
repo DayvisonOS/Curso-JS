@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio</title>
+
+    <style>
+        body{
+            font: normal 18pt Arial;
+
+        }
+    </style>
+</head>
+<p>Inserindo novas Divs</p> 
+<button id="btn" onclick="novaDiv()">
+    Clique aqui 
+    </button>
+    <br>
+
+
+<script>
+    var cont = 0;
+    var newDiv;
+    function novaDiv(){
+        
+
+    newDiv= document.createElement('div');
+    newDiv.setAttribute('class','area'+cont);
+    newDiv.setAttribute('onmouseenter','getRandom('+cont+')');
+    newDiv.style.width='100px';
+    newDiv.style.height='100px';
+    newDiv.style.backgroundColor='red';
+    newDiv.style.border='20px'
+    newDiv.style.borderColor='black';
+    newDiv.style.marginTop='20px';
+    newDiv.style.marginBottom='20px';
+
+    document.body.appendChild(newDiv);  
+
+    cont++;
+
+
+
+console.log(newDiv);
+
+}
+
+function getRandom(cont) {
+var areaNova= document.querySelector('.area'+cont);
+ var letters = "0123456789ABCDEF";
+ var color = "#";
+ for (var i = 0; i < 6; i++) {
+ color += letters[Math.floor(Math.random() * 16)];
+ }
+//  console.log(areaNova);
+ return areaNova.style.backgroundColor=color;
+ 
+
+}
+</script>
+    
+</body>
+</html>
